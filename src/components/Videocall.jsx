@@ -12,8 +12,8 @@ const Videocall = () => {
     const { roomId } = useParams();
     const myMeeting = async (element) => {
         try {
-            const appId = Number(process.env.REACT_APP_APPID)
-            const serverSecret = process.env.REACT_APP_SERVER_SECRET
+            const appId = Number("974914110");
+            const serverSecret = "c9a703cdbb8c89957f8c27aad2edcfe4";
             const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appId, serverSecret, roomId, Date.now().toString(), currentUser.displayName)
             console.log({ appId, serverSecret })
             const zp = ZegoUIKitPrebuilt.create(kitToken)
